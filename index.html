@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock Paper Scissors</title>
+        <script>
+            let answers = ['rock','paper','scissors'];
+            function computerPlay(){
+                return answers[Math.floor(Math.random() * answers.length)];
+            }
+
+            let playerSelection = prompt('Enter a choice','Rock, or Paper or Scissors');
+
+            function playRound(playerSelection, computerSelection){
+
+                if(playerSelection != null){
+                    if (answers.includes(playerSelection)){
+                        alert('You are here!');
+                    } else {
+                        alert('Please enter either Rock, Paper or Scissors');
+                    }
+                }else {
+                    alert('You have to provide a value!');
+                }
+            }
+
+            playRound(playerSelection,computerPlay());
+            
+        </script>
+        <body>
+
+        </body>
+    </head>
+</html>
